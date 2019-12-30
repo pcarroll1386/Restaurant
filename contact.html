@@ -6,21 +6,79 @@
 -->
 <html lang="en"> 
     <head> 
-        <title>Page Title</title>	
+        <title>Contact Us</title>	
     </head> 
     
     <body>
         <header>
-            <h1>Main Title</h1>
+            <h1>The Trough and Bale</h1>
         </header>
+		<hr />
 
         <nav>
-
+			<p><a href="index.html">Home</a></p>
+			<p><a href="menu.html">Menu</a></p>
+			<p><a href="contact.html">Contact Us</a></p>
         </nav>
+		<hr />
+		
+		<section>
+			<form action="submit.html" methough="POST">
+			<label for="name">Name:
+			</label><br />
+			<input type="text" id="name" name="name"><br />
+			
+			<label for="email">Email:
+			<label><br />
+			<input type="text" id="email" name="email"><br />
+			
+			<label for="phone">Phone Number:
+			</label><br />
+			<input type="text" id="phone" name="phone"><br />
+			
+			<label for"inquiry">Reason for Inquiry:</label><br />
+			<select id="inquiry" name ="inquiry">
+				<option value="default" selected>--Catering--</option>
+				<option value="privateParty">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select>
+			
+			<label for="info">Additional Information</label><br />
+			<textarea id="info" name="info">
+			</textarea>
+			
+			<fieldset>
+				<legend>Have you been to the restaurant?</legend>
+				<input type="radio" id="choice1" name="questionaire" value="yes">
+				<label for="choice1">Yes</Label>
+				<input type="radio" id="choice2" name="questionaire" value="no">
+				<label for="choice2">No</Label>
+			</fieldset>
 
+			<fieldset>
+				<legend>Best days to contact you:</legend>
+				<input type="checkbox" id="monday" name="availability" value="monday">
+				<label for="monday">M</label>
+				<input type="checkbox" id="tuesday" name="availability" value="tuesday">
+				<label for="tuesday">T</label>
+				<input type="checkbox" id="wednesday" name="availability" value="wednesday">
+				<label for="wednesday">W</label>
+				<input type="checkbox" id="thursday" name="availability" value="thursday">
+				<label for="thursday">Th</label>
+				<input type="checkbox" id="friday" name="availability" value="friday">
+				<label for="friday">F</label><br />
+			</fieldset>
+			
+			<input type="submit" name="submit" value="Send Request">
+						
+		</section>
+		<hr />	
 
         <footer>
-			<p>&copy; 2019 Paul F. Carroll. All rights reserved. </p>
+			<p>100 E Main, Altamont, UT, 84001</p>
+			<p> 435-555-3124</p>
         </footer>
+		<hr />
     </body> 
 </html

@@ -1,0 +1,57 @@
+/*
+Creator: Paul F. Carroll
+Date Created: 1/8/2020
+Date Last Modified: 1/9/2020
+*/
+
+body {
+    background-color: #d6d4a0;
+    font-family: 'Sniglet', cursive;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #db995a;
+    border: thick solid #e24e1b;
+    color: black;
+    height: 150px;
+    text-align: center;
+    padding: 40px 5px 30px 5px;
+}
+h1 {
+    font-size: 3.5em;
+    font-family: 'Patua One', cursive;  
+}
+.clear-float {
+    clear: both;
+}
+nav {
+    border-top: 6px solid #531c27;
+    border-bottom: 6px solid #531c27;
+    margin-top: 5px;
+}
+/* navigation buttons */
+nav a {
+    background-color: #531c27;
+    color: white;
+    padding: 10px;
+    border: thin solid #531c27;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px;
+    width: 100px;
+    float: left;
+}
+}
+nav a:visited {
+    color: #475b63;
+}
+nav a:hover {
+    background-color: #db995a;
+    color: black;
+}
+nav a:active{
+    font-weight: bold;
+}

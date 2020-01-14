@@ -2,20 +2,26 @@
 <!--
     Name: Paul F. Carroll
     Date Created: 12/30/19 
-    Most recent revision: 1/9/2020
+    Most recent revision: 1/14/2020
 -->
 <html lang="en"> 
     <head> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device=width, initial-scale=1, shrink-to-fit=no">
 		<title>Contact Us</title>
+		<noscript>
+			<p>Page is best viewed with JavaScript!</p>
+		</noscript>
+		<script type="text/JavaScript" src="scripts/contactForm.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Sniglet&display=swap" rel="stylesheet">
 		<style>
-			label, fieldset {
+		
+			label, fieldset, {
 				font-size: 1.1em;
+				text-align: center;
 			}
 			h2 {
 				text-align: center;
@@ -50,7 +56,7 @@
 				color: black;
 			}
 			textarea {
-				width: 100%;
+				width: 30%;
 				height: 200px;
 				padding: 12px 20px;
 				margin: 12px 0;
@@ -68,7 +74,7 @@
     <body>
 		<div class="container-fluid">
         	<header>
-            	<h1>The Pasture</h1>
+				<h1>The Pasture</h1>
         	</header>
 		
 
@@ -81,37 +87,33 @@
 		
 			
 			<h2>Contact Us!</h2>
-				
-					<form class="needs-validation" novalidate action="submit.html" methough="POST">
-					
+				<form name="contactUs" class="needs-validation"  action="index.html" onsubmit="return inputValidate()" methough="POST">
 					<label for="name">Name:
-					</label><br />
-					<input type="text" class="form-control" id="name" name="name" required><br />
-			
-			
+					</label>
+					<input type="text" id="name" name="name"><br />
+					
 					<label for="email">Email:
-					</label><br />
+					</label>
 					<input type="text" id="email" name="email"><br />
 			
-			
 					<label for="phone">Phone Number:
-					</label><br />
-					<input type="text" id="phone" name="phone"><br />
+					</label>
+					<input type="text" id="phone" name="phone" onkeypress="isInputNumber(event)"><br />
 			
 			
-					<label for="inquiry">Reason for Inquiry:</label><br />
+					<label for="inquiry">Reason for Inquiry:</label>
 					<select id="inquiry" name ="inquiry">
 						<option value="default" selected>--Catering--</option>
 						<option value="privateParty">Private Party</option>
 						<option value="feedback">Feedback</option>
 						<option value="other">Other</option>
-					</select>
+					</select><br />
 			
-					<label for="info">Additional Information</label><br />
+					<label for="info">Additional Information</label>
 					<textarea id="info" name="info">
 					</textarea>
 			
-					<fieldset text-align="right">
+					<fieldset>
 						<legend>Have you been to the restaurant?</legend>
 						<input type="radio" id="choice1" name="questionaire" value="yes">
 						<label for="choice1">Yes</Label>
@@ -130,11 +132,11 @@
 						<input type="checkbox" id="thursday" name="availability" value="thursday">
 						<label for="thursday">Th</label>
 						<input type="checkbox" id="friday" name="availability" value="friday">
-						<label for="friday">F</label><br />
+						<label for="friday">F</label>
 					</fieldset>
 			
 					<input type="submit" name="submit" value="Send Request">
-			
+			</form>	
 		</div>
 		
 

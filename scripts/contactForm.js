@@ -1,3 +1,10 @@
+
+function isInputNumber(evt) {
+    var ch = String.fromCharCode(evt.which);
+    if (!(/[0-9]/.test(ch))) {
+        evt.preventDefault();
+    }
+}
 function inputValidate() {
     var x = document.forms["contactUs"]["name"].value;
     if (x == "") {
@@ -20,9 +27,4 @@ function inputValidate() {
         return false;
     }
 }
-function isInputNumber(evt) {
-    var ch = String.fromCharCode(evt.which);
-    if (!(/[0-9]/.test(ch))) {
-        evt.preventDefault();
-    }
-}
+
